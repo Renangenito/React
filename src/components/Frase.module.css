@@ -1,0 +1,9 @@
+.primeiraFrase{
+    color: white;
+    background-color: black;
+    box-shadow: 0 0 5px white;
+    margin: 3px 0;
+}
+.segundaFrase{
+    background-color: yellow;
+}
