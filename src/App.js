@@ -1,11 +1,24 @@
+import { useState } from "react";
 import "./App.css";
-import Condicional from "./components/Condicional";
+import Button from "./components/Button";
+import QualNome from "./components/QualNome";
+
 
 function App() {
- 
+
+const [nome, setNome] = useState("")
+const [nomeAdiciona, setNomeAdiciona] = useState("")
+function adicionaNome(){
+  setNomeAdiciona(nome)
+
+}
   return (
+  
     <div className="App">
-     <Condicional />
+      <QualNome setNome={setNome}/>
+      <Button event={adicionaNome} text="Adicionar nome"/>
+      <p>{nomeAdiciona}</p>
+      
     </div>
   );
 }
