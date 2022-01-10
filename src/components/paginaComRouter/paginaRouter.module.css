@@ -1,0 +1,19 @@
+.listaNavBar{
+   
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    background-color: blueviolet;
+}
+.listaNavBar li{
+    list-style-type: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin: auto 5px;
+    
+}
+.listaNavBar li a{
+    text-decoration: none;
+    color: white;
+}

@@ -1,25 +1,22 @@
-import { useState } from "react";
 import "./App.css";
-import Button from "./components/Button";
-import QualNome from "./components/QualNome";
-
+import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import Home from "./components/paginaComRouter/Home";
+import Sobre from "./components/paginaComRouter/Sobre";
+import Error404 from "./components/paginaComRouter/Error404";
+import NavBar from "./components/paginaComRouter/NavBar";
 
 function App() {
-
-const [nome, setNome] = useState("")
-const [nomeAdiciona, setNomeAdiciona] = useState("")
-function adicionaNome(){
-  setNomeAdiciona(nome)
-
-}
   return (
-  
-    <div className="App">
-      <QualNome setNome={setNome}/>
-      <Button event={adicionaNome} text="Adicionar nome"/>
-      <p>{nomeAdiciona}</p>
-      
-    </div>
+   
+    <Router>
+    <NavBar />
+      <Routes>
+        <Route  path='/Home' element={<Home/>} />
+        <Route  path='/Sobre' element={ <Sobre />} />
+        <Route  path='*' element={<Error404 />} />
+      </Routes>
+    </Router>
+
   );
 }
 
